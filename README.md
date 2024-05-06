@@ -1,4 +1,4 @@
-![image](https://github.com/Prasannalakshmiganesan/EXNO-6-DS/assets/118610231/b813a13e-aa28-4c33-b243-4276ce5afdcc)![image](https://github.com/Prasannalakshmiganesan/EXNO-6-DS/assets/118610231/4fb3d065-a893-4cc9-868c-aeb016cfa6e9)# EX:6 DATA VISUALIZATION USING SEABORN LIBRARY
+# EX:6 DATA VISUALIZATION USING SEABORN LIBRARY
 
 # Aim:
   To Perform Data Visualization using seaborn python library for the given datas.
