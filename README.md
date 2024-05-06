@@ -251,8 +251,59 @@ plt.show()
 ```
 ![image](https://github.com/Prasannalakshmiganesan/EXNO-6-DS/assets/118610231/e6fdfa54-aa19-4d02-b9e3-ff6a9c021333)
 
+```
+import seaborn as sns
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+mart = pd.read_csv("supermarket.csv")
+```
+```
+mart = mart[['Gender', 'Payment', 'Unit price', 'Quantity', 'Total', 'gross income']]
+mart.head(10)
+```
+![image](https://github.com/Prasannalakshmiganesan/EXNO-6-DS/assets/118610231/81f6a256-fce3-42ef-b7df-6e0c025c43c6)
+
+```
+sns.kdeplot(data = mart, x = 'Total')
+```
+![image](https://github.com/Prasannalakshmiganesan/EXNO-6-DS/assets/118610231/fd04bc1e-db63-4937-bcb6-d8636b35b26b)
+
+```
+sns.kdeplot(data = mart, x = "Unit price")
+```
+![image](https://github.com/Prasannalakshmiganesan/EXNO-6-DS/assets/118610231/9af31847-a3a5-494d-a5a4-81f1af403611)
+
+```
+sns.kdeplot(data=mart)
+```
+![image](https://github.com/Prasannalakshmiganesan/EXNO-6-DS/assets/118610231/cbc68ea3-a97e-4472-a577-9a8e9d1a80d5)
+
+```
+sns.kdeplot(data=mart, x='Total', hue='Payment', multiple= 'stack')
+```
+![image](https://github.com/Prasannalakshmiganesan/EXNO-6-DS/assets/118610231/bf0c3dd0-3435-408f-8d73-49aab240b59f)
+
+```
+sns.kdeplot(data=mart, x='Total', hue='Payment', multiple='stack', linewidth=5, palette='Dark2', alpha=0.5)
+```
+![image](https://github.com/Prasannalakshmiganesan/EXNO-6-DS/assets/118610231/1062e7c0-4ba2-48de-9e43-d700668ec0e2)
+
+```
+sns.kdeplot(data=mart, x='Unit price', y='gross income')
+```
+![image](https://github.com/Prasannalakshmiganesan/EXNO-6-DS/assets/118610231/5d2f1067-fc24-410d-83b6-41979f1e6d44)
+
 
 ### 5.Heatmap
+```
+data = np.random.randint(low = 1, high = 100, size = (10, 10))
+print("The data to be plotted.\n")
+print(data)
+```
+![image](https://github.com/Prasannalakshmiganesan/EXNO-6-DS/assets/118610231/51efc57a-9e41-4438-a500-4d198af38101)
+
 ```
 numeric_df = df.select_dtypes(include=['float64', 'int64'])
 corr_matrix = numeric_df.corr()
@@ -261,6 +312,17 @@ plt.title('Heatmap of Titanic Dataset')
 plt.show()
 ```
 ![image](https://github.com/Prasannalakshmiganesan/EXNO-6-DS/assets/118610231/1dbf20d4-d7bf-42a8-8bc7-13737991d3aa)
+
+```
+hm = sns.heatmap(data = data, annot=True)
+```
+![image](https://github.com/Prasannalakshmiganesan/EXNO-6-DS/assets/118610231/3b492335-c15d-42da-9d75-5a2efb6d9764)
+
+```
+hm = sns.heatmap(data = data)
+```
+![image](https://github.com/Prasannalakshmiganesan/EXNO-6-DS/assets/118610231/3af61488-27b6-43e9-be26-490208198f4b)
+
 
 # Result:
   Thus, the Data Visualization using seaborn python library for the given data is implemented successfully
